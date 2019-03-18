@@ -18,7 +18,7 @@ temp=[]
 for col in df.columns:
     if len(df[col].unique()) == 1:
         temp.append(col)
-        df.drop(col,inplace=True,axis=1)
+        df.drop(col,inplace=True,axis=2)
 print(temp)
 df[df.duplicated(keep=False)]
 df.drop_duplicates(['EmployeeNumber'],keep='first')
